@@ -1,0 +1,28 @@
+	<th:block th:insert="admin/header.html"></th:block>
+
+
+
+<div class="container my-3">
+<table class="table table-bordered">
+<tr>
+<th>S.No.</th>
+<th>Name</th>
+<th>Address</th>
+<th>phonenumber</th>
+<th>Message</th>
+
+</tr>
+
+<tr th:each="c : ${contactlist}">
+<td>[[${c.id}]]</td>
+<td>[[${c.customer_name}]]</td>
+<td>[[${c.customer_address}]]</td>
+<td>[[${c.customer_phonenumber}]]</td>
+<td>[[${c.customer_message}]]</td>
+</tr>
+
+
+</table>
+</div>
+
+	<th:block th:insert="admin/footer.html"></th:block>
